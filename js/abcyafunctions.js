@@ -21,7 +21,11 @@ function initButtons() {
         document.getElementById("btnNo").onmousedown = hideExitDialog;
         document.getElementById("exitButton").style.display = "block";
     }else{
-        document.getElementById("btnExit").style.display = "none";
+        try {
+            document.getElementById("btnExit").style.display = "none";
+        }catch{
+            // just skip this
+        }
     }
 
 }
